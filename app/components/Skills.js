@@ -6,8 +6,11 @@ const Skills = () => {
     'Redux',
     'Next.js',
     'JavaScript (ES6+)',
-    'HTML5 & CSS3',
-    'Verson control(git)'
+    'Node.js/Express.js',
+    'Verson control(git)',
+    'react-native',
+    'firebase/supabase',
+    
   ];
 
   return (
