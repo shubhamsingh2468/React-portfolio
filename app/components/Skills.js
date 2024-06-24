@@ -7,7 +7,7 @@ const Skills = () => {
     'Next.js',
     'JavaScript (ES6+)',
     'Node.js/Express.js',
-    'Verson control(git)',
+    'Wordpress',
     'react-native',
     'firebase/supabase',
     

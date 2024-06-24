@@ -15,10 +15,17 @@ const projects = [
     link: 'https://softcoplus7-website.vercel.app/', 
   },
   {
-    title: 'Rapid-Pest',
-    description: 'Rapid Pest Control Melbourne appears to be a family-owned pest control company servicing the Melbourne, Victoria area. They specialize in termite control and general pest control services for both residential and commercial properties.',
-    technologies: ['React.js', 'Next.js', 'Redux', 'mongodb', 'html'],
-    link: 'https://www.rapidpestcontrolmelbourne.com.au/', 
+    title: 'skyrides',
+    description: 'Skyrides Charter Services has taken its place as a regional leader in safety, quality and customer service among its peers',
+    technologies: ['wordpress', 'Customizer'],
+    link: 'https://skyrides.in/', 
+  },
+
+  {
+    title: 'construction website',
+    description: 'R&D WORKFORCE SOLUTIONS is a dynamic construction-based company that passionately provides Recruitment, Construction and Property services in London Area & Manchester.',
+    technologies: ['wordpress', 'Customizer'],
+    link: 'https://rndworkforce.uk/', 
   },
 ];
 
