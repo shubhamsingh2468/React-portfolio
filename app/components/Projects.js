@@ -15,17 +15,30 @@ const projects = [
     link: 'https://softcoplus7-website.vercel.app/', 
   },
   {
-    title: 'skyrides',
-    description: 'Skyrides Charter Services has taken its place as a regional leader in safety, quality and customer service among its peers',
-    technologies: ['wordpress', 'Customizer'],
-    link: 'https://skyrides.in/', 
+    title: 'Bharat-Taxi',
+    description: 'the fastest growing online cab booking and taxi hire company in India committed to providing door-to-door online taxi service to travelers. India is huge in terms of area, population, and diversity, proving service is very pleasing. We make taxi booking available to all with our website. Cabs at affordable prices allow anyone to enjoy our service.',
+    technologies: ['next.js', 'react.js', 'node.js', 'express.js', 'typescript','mongodb'],
+    link: 'https://www.bharattaxi.com/', 
   },
 
   {
-    title: 'construction website',
-    description: 'R&D WORKFORCE SOLUTIONS is a dynamic construction-based company that passionately provides Recruitment, Construction and Property services in London Area & Manchester.',
-    technologies: ['wordpress', 'Customizer'],
-    link: 'https://rndworkforce.uk/', 
+    title: 'Rapid-Pest',
+    description: 'This Melbourne, Victoria-based company is family-run and has been providing pest and termite management services for more than ten years. initiated in 2011.',
+    technologies: ['react.js', 'next.js', 'mongodb', 'javascript', 'tailwindcss'],
+    link: 'https://www.rapidpestcontrolmelbourne.com.au/', 
+  },
+  {
+    title: 'Instashop',
+    description: 'InstaShop is an online marketplace and on-demand delivery app that connects users with local shops in the Middle East.',
+    technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
+    link: 'https://play.google.com/store/apps/details?id=com.stedor.instashop&hl=en_IN', 
+  },
+
+  {
+    title: 'BillPoint',
+    description: 'With BillPoint, you can enjoy a hassle-free payment experience for all your essential bills and services. We offer a simple, fast, and secure way to pay your utility bills, and even place bets all in one place.',
+    technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
+    link: 'https://play.google.com/store/apps/details?id=co.billpoint.app&hl=en_IN', 
   },
 ];
 
@@ -50,7 +63,7 @@ const Projects = () => {
               )}
               <p className="text-sm mt-2">{project.description}</p>
               {project.technologies && ( // Handle missing technologies gracefully
-                <ul className="technologies grid grid-cols-3 items-center text-sm mt-4">
+                <ul className="technologies grid grid-cols-3 items-center text-sm mt-4 ">
                   {project.technologies.map((tech) => (
                     <li key={tech} className="mr-2 mt-4">
                       <span className="inline-block bg-blue-500 text-white px-2 py-1 rounded-full">{tech}</span>

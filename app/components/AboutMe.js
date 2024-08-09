@@ -6,9 +6,11 @@ const AboutMe = () => {
       <div className="container mx-auto px-4 max-w-2xl">
         <h2>About Me</h2>
         <p>
-          I am a 5+ year experienced Full-stack developer with a strong
-          passion for creating user-friendly, interactive, and performant web applications.
-          Enthusiastic and skilled Full-Stack developer with a passion for building dynamic and user-friendly web applications. Possesses a strong understanding of Full-Stack concepts and best practices, eager to leverage these skills to contribute to innovative projects.
+        I am a skilled full-stack developer with a proven ability to craft exceptional digital experiences across web and mobile platforms. My expertise lies in leveraging a robust tech stack including React, Next.js, MongoDB, Express.js, React Native, Tailwind CSS, JavaScript, and TypeScript to build high-performance, scalable, and user-centric applications.
+
+With a deep understanding of both frontend and backend development, I excel at transforming complex ideas into intuitive and engaging user interfaces. I am proficient in building robust APIs, managing databases, and optimizing application performance. My passion for staying up-to-date with the latest technological advancements ensures that I deliver cutting-edge solutions that meet the evolving needs of modern businesses.
+
+I thrive on challenges and am dedicated to delivering exceptional results. Let's collaborate to bring your vision to life.
         </p>
       </div>
     </section>
