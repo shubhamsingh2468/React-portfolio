@@ -3,42 +3,56 @@ import Link from 'next/link'; // Import Next.js Link component
 
 const projects = [
   {
-    title: 'Banbanjara',
+    title: 'Banbanjara (web application)',
     description: 'This is an article about travel experiences offered by BanBanjara. It discusses trekking, tours, and activities in various locations around India. The company offers curated experiences for different interests, such as adventure travel, weekend getaways, and sightseeing. BanBanjara also offers luxury experiences.',
     technologies: ['React.js', 'Next.js', 'MaterialUI', 'redux', 'express.js', 'mongodb'],
     link: 'https://banbanjara.com/', 
   },
   {
-    title: 'Softcoplus',
+    title: 'Softcoplus (web application)',
     description: 'Softcoplus is a company that offers Salesforce services. They describe themselves as a best service and product based company in Canada. Their services include AI/ML services, cloudification services, CMS software, data science services, data services, DevOps services, digital platform development, enterprise application development, mobile app development, quality assurance & testing services, and Salesforce development. Softcoplus states that their motto is mutual growth and that can only be achieved by proper customer management.',
     technologies: ['React.js', 'Next.js', 'Tailwindcss', 'express.js', 'firebase', ],
     link: 'https://softcoplus7-website.vercel.app/', 
   },
   {
-    title: 'Bharat-Taxi',
+    title: 'Bharat-Taxi (web application)',
     description: 'the fastest growing online cab booking and taxi hire company in India committed to providing door-to-door online taxi service to travelers. India is huge in terms of area, population, and diversity, proving service is very pleasing. We make taxi booking available to all with our website. Cabs at affordable prices allow anyone to enjoy our service.',
     technologies: ['next.js', 'react.js', 'node.js', 'express.js', 'typescript','mongodb'],
     link: 'https://www.bharattaxi.com/', 
   },
 
   {
-    title: 'Rapid-Pest',
+    title: 'Rapid-Pest (web application)',
     description: 'This Melbourne, Victoria-based company is family-run and has been providing pest and termite management services for more than ten years. initiated in 2011.',
     technologies: ['react.js', 'next.js', 'mongodb', 'javascript', 'tailwindcss'],
     link: 'https://www.rapidpestcontrolmelbourne.com.au/', 
   },
   {
-    title: 'Instashop',
+    title: 'Instashop (mobile application)',
     description: 'InstaShop is an online marketplace and on-demand delivery app that connects users with local shops in the Middle East.',
     technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
     link: 'https://play.google.com/store/apps/details?id=com.stedor.instashop&hl=en_IN', 
   },
 
   {
-    title: 'BillPoint',
+    title: 'BillPoint (mobile application)',
     description: 'With BillPoint, you can enjoy a hassle-free payment experience for all your essential bills and services. We offer a simple, fast, and secure way to pay your utility bills, and even place bets all in one place.',
     technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
     link: 'https://play.google.com/store/apps/details?id=co.billpoint.app&hl=en_IN', 
+  },
+
+  {
+    title: 'AthleticApp (mobile application)',
+    description: 'The AthleticAPP syncs with your Athletic.net account to create a communications, management and engagement network for Track & Field and Cross Country teams, athletes, parents and fans.',
+    technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
+    link: 'https://play.google.com/store/apps/details?id=net.athletic.app&hl=en_IN', 
+  },
+
+  {
+    title: 'Flame (mobile application)',
+    description: 'Flame is a game application where can get awesome gift cards, money rewards & vouchers for playing mobile games!',
+    technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
+    link: 'https://play.google.com/store/apps/details?id=online.appflame.app&hl=en_IN', 
   },
 ];
 
