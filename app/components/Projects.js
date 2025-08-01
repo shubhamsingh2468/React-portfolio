@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from 'next/link'; // Import Next.js Link component
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -56,36 +57,63 @@ const projects = [
   },
 ];
 
-
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      type: 'spring',
+      stiffness: 60,
+      damping: 18,
+    },
+  }),
+};
 
 const Projects = () => {
   return (
     <section className="projects bg-gray-200 py-20" id="projects">
-      <div className="container mx-auto px-4 max-w-2xl">
-        <h2>Projects</h2>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h2 className="text-3xl font-bold mb-10 text-center">Projects</h2>
         <ul className="project-list grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <li key={project.title} className="project rounded-lg border border-gray-300 p-4">
-              {project.link.startsWith('http') ? ( // Check if it's an external link
-                <a href={project.link} target="_blank" rel="noreferrer" className="text-blue-500 hover:underline">
+          {projects.map((project, idx) => (
+            <motion.li
+              key={project.title}
+              className="project rounded-xl border border-gray-300 p-6 bg-white shadow-md flex flex-col"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={idx}
+            >
+              {project.link.startsWith('http') ? (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-600 hover:underline text-lg font-semibold"
+                >
                   {project.title}
                 </a>
               ) : (
-                <Link href={project.link}>
-                  {project.title}  {/* Removed the inner <a> tag */}
+                <Link href={project.link} className="text-blue-600 hover:underline text-lg font-semibold">
+                  {project.title}
                 </Link>
               )}
-              <p className="text-sm mt-2">{project.description}</p>
-              {project.technologies && ( // Handle missing technologies gracefully
-                <ul className="technologies grid grid-cols-3 items-center text-sm mt-4 ">
+              <p className="text-sm mt-2 text-gray-700">{project.description}</p>
+              {project.technologies && (
+                <ul className="flex flex-wrap gap-2 mt-4">
                   {project.technologies.map((tech) => (
-                    <li key={tech} className="mr-2 mt-4">
-                      <span className="inline-block bg-blue-500 text-white px-2 py-1 rounded-full">{tech}</span>
+                    <li key={tech}>
+                      <span className="inline-block bg-blue-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow-sm hover:bg-blue-600 transition">
+                        {tech}
+                      </span>
                     </li>
                   ))}
                 </ul>
               )}
-            </li>
+            </motion.li>
           ))}
         </ul>
       </div>
