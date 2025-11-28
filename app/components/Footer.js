@@ -14,9 +14,7 @@ const Footer = () => {
   return (
     <footer className="relative bg-gradient-to-b from-gray-800 to-gray-900 border-t border-blue-500/20">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +28,6 @@ const Footer = () => {
             </p>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,19 +48,19 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Social Links - only GitHub & Facebook */}
+          {/* Social Links: GitHub & Facebook only */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <h4 className="text-white font-semibold mb-4">Follow Me</h4>
+            <h4 className="text-white font-semibold mb-4">Get in Touch</h4>
             <div className="flex gap-4">
               <motion.a
                 href="https://github.com/shubhamsingh2468"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 className="w-10 h-10 bg-blue-500/10 hover:bg-blue-500/20 rounded-lg flex items-center justify-center text-lg transition border border-blue-500/30"
                 title="GitHub"
               >
@@ -76,7 +73,7 @@ const Footer = () => {
                 href="https://www.facebook.com/shubham.kumar.singh.988083/"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
                 className="w-10 h-10 bg-blue-500/10 hover:bg-blue-500/20 rounded-lg flex items-center justify-center text-lg transition border border-blue-500/30"
                 title="Facebook"
               >
@@ -88,10 +85,8 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-blue-500/20 py-8"></div>
 
-        {/* Bottom Section */}
         <motion.div
           className="flex flex-col md:flex-row justify-between items-center text-center md:text-left"
           initial={{ opacity: 0 }}
@@ -107,7 +102,6 @@ const Footer = () => {
         </motion.div>
       </div>
 
-      {/* Scroll to Top Button */}
       <motion.button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 rounded-lg flex items-center justify-center text-white shadow-lg transition"
