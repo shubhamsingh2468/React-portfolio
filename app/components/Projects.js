@@ -5,117 +5,119 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: 'Banbanjara (web application)',
-    description: 'This is an article about travel experiences offered by BanBanjara. It discusses trekking, tours, and activities in various locations around India. The company offers curated experiences for different interests, such as adventure travel, weekend getaways, and sightseeing. BanBanjara also offers luxury experiences.',
-    technologies: ['React.js', 'Next.js', 'MaterialUI', 'redux', 'express.js', 'mongodb'],
-    link: 'https://banbanjara.com/', 
-  },
-  {
-    title: 'Softcoplus (web application)',
-    description: 'Softcoplus is a company that offers Salesforce services. They describe themselves as a best service and product based company in Canada. Their services include AI/ML services, cloudification services, CMS software, data science services, data services, DevOps services, digital platform development, enterprise application development, mobile app development, quality assurance & testing services, and Salesforce development. Softcoplus states that their motto is mutual growth and that can only be achieved by proper customer management.',
-    technologies: ['React.js', 'Next.js', 'Tailwindcss', 'express.js', 'firebase', ],
-    link: 'https://softcoplus7-website.vercel.app/', 
+    description: 'Travel experiences platform offering trekking, tours, and activities across India with curated adventures for all interests.',
+    technologies: ['React.js', 'Next.js', 'MaterialUI', 'Redux', 'Express.js', 'MongoDB'],
+    link: 'https://banbanjara.com/',
+    icon: '🏔️'
   },
   {
     title: 'Bharat-Taxi (web application)',
-    description: 'the fastest growing online cab booking and taxi hire company in India committed to providing door-to-door online taxi service to travelers. India is huge in terms of area, population, and diversity, proving service is very pleasing. We make taxi booking available to all with our website. Cabs at affordable prices allow anyone to enjoy our service.',
-    technologies: ['next.js', 'react.js', 'node.js', 'express.js', 'typescript','mongodb'],
-    link: 'https://www.bharattaxi.com/', 
+    description: 'Fast-growing online cab booking platform providing affordable door-to-door taxi services across India.',
+    technologies: ['Next.js', 'React.js', 'Node.js', 'Express.js', 'TypeScript', 'MongoDB'],
+    link: 'https://www.bharattaxi.com/',
+    icon: '🚕'
   },
-
   {
     title: 'Rapid-Pest (web application)',
-    description: 'This Melbourne, Victoria-based company is family-run and has been providing pest and termite management services for more than ten years. initiated in 2011.',
-    technologies: ['react.js', 'next.js', 'mongodb', 'javascript', 'tailwindcss'],
-    link: 'https://www.rapidpestcontrolmelbourne.com.au/', 
+    description: 'Family-run pest and termite management service provider based in Melbourne with 10+ years of expertise.',
+    technologies: ['React.js', 'Next.js', 'MongoDB', 'JavaScript', 'Tailwind CSS'],
+    link: 'https://www.rapidpestcontrolmelbourne.com.au/',
+    icon: '🛡️'
   },
   {
-    title: 'Instashop (mobile application)',
-    description: 'InstaShop is an online marketplace and on-demand delivery app that connects users with local shops in the Middle East.',
-    technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
-    link: 'https://play.google.com/store/apps/details?id=com.stedor.instashop&hl=en_IN', 
+    title: 'InstaShop (web application)',
+    description: 'Leading online marketplace and on-demand delivery platform across the Middle East connecting customers with local retailers.',
+    technologies: ['React.js', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS', 'Firebase'],
+    link: 'https://instashop.com/en-ae',
+    icon: '🛒'
   },
-
   {
     title: 'BillPoint (mobile application)',
-    description: 'With BillPoint, you can enjoy a hassle-free payment experience for all your essential bills and services. We offer a simple, fast, and secure way to pay your utility bills, and even place bets all in one place.',
-    technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
-    link: 'https://play.google.com/store/apps/details?id=co.billpoint.app&hl=en_IN', 
+    description: 'Hassle-free payment platform for bills, services, and betting all in one secure place.',
+    technologies: ['React Native', 'Firebase', 'JavaScript', 'Tailwind CSS'],
+    link: 'https://play.google.com/store/apps/details?id=co.billpoint.app&hl=en_IN',
+    icon: '💳'
   },
-
   {
     title: 'AthleticApp (mobile application)',
-    description: 'The AthleticAPP syncs with your Athletic.net account to create a communications, management and engagement network for Track & Field and Cross Country teams, athletes, parents and fans.',
-    technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
-    link: 'https://play.google.com/store/apps/details?id=net.athletic.app&hl=en_IN', 
+    description: 'Communications and management network for Track & Field and Cross Country teams, athletes, parents and fans.',
+    technologies: ['React Native', 'Firebase', 'JavaScript', 'Tailwind CSS'],
+    link: 'https://play.google.com/store/apps/details?id=net.athletic.app&hl=en_IN',
+    icon: '🏃'
   },
-
   {
     title: 'Flame (mobile application)',
-    description: 'Flame is a game application where can get awesome gift cards, money rewards & vouchers for playing mobile games!',
-    technologies: ['React-native', 'firebase', 'javascript', 'tailwindcss'],
-    link: 'https://play.google.com/store/apps/details?id=online.appflame.app&hl=en_IN', 
+    description: 'Gamified rewards platform where users get gift cards, money rewards & vouchers for playing mobile games.',
+    technologies: ['React Native', 'Firebase', 'JavaScript', 'Tailwind CSS'],
+    link: 'https://play.google.com/store/apps/details?id=online.appflame.app&hl=en_IN',
+    icon: '🔥'
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i = 1) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.15,
-      type: 'spring',
-      stiffness: 60,
-      damping: 18,
-    },
-  }),
-};
-
 const Projects = () => {
   return (
-    <section className="projects bg-gray-200 py-20" id="projects">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-3xl font-bold mb-10 text-center">Projects</h2>
-        <ul className="project-list grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <motion.li
-              key={project.title}
-              className="project rounded-xl border border-gray-300 p-6 bg-white shadow-md flex flex-col"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              custom={idx}
+    <section id="projects" className="relative py-20 md:py-32 px-4 bg-gradient-to-b from-gray-800 to-gray-900">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Title */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 mb-4">
+            Featured Projects
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
+        </motion.div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -10 }}
+              className="group"
             >
-              {project.link.startsWith('http') ? (
+              <div className="h-full bg-gradient-to-br from-gray-800 to-gray-900 border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/50 transition backdrop-blur-sm">
+                {/* Icon */}
+                <div className="text-4xl mb-4">{project.icon}</div>
+
+                {/* Title */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition">
+                  {project.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                  {project.description}
+                </p>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.map((tech, i) => (
+                    <span key={i} className="px-3 py-1 bg-blue-500/10 text-blue-300 rounded-full text-xs font-medium">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Link */}
                 <a
                   href={project.link}
                   target="_blank"
-                  rel="noreferrer"
-                  className="text-blue-600 hover:underline text-lg font-semibold"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white text-sm rounded-lg font-semibold transition transform hover:scale-105"
                 >
-                  {project.title}
+                  View Project →
                 </a>
-              ) : (
-                <Link href={project.link} className="text-blue-600 hover:underline text-lg font-semibold">
-                  {project.title}
-                </Link>
-              )}
-              <p className="text-sm mt-2 text-gray-700">{project.description}</p>
-              {project.technologies && (
-                <ul className="flex flex-wrap gap-2 mt-4">
-                  {project.technologies.map((tech) => (
-                    <li key={tech}>
-                      <span className="inline-block bg-blue-500/90 text-white px-3 py-1 rounded-full text-xs font-medium shadow-sm hover:bg-blue-600 transition">
-                        {tech}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </motion.li>
+              </div>
+            </motion.div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

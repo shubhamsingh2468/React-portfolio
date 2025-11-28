@@ -1,48 +1,71 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 60, damping: 18 } },
-};
-
 const AboutMe = () => {
+  const skills = [
+    { category: "Frontend", items: ["React.js", "Next.js", "Tailwind CSS", "Material UI", "Framer Motion"] },
+    { category: "Backend", items: ["Node.js", "Express.js", "MongoDB", "Firebase", "RESTful APIs"] },
+    { category: "Mobile", items: ["React Native", "Expo", "Firebase", "Redux"] },
+  ];
+
   return (
-    <section className="about-me bg-gray-100 py-20" id="about-me">
-      <div className="container mx-auto px-4 max-w-2xl rounded-xl shadow-lg bg-white">
+    <section id="about-me" className="relative py-20 md:py-32 px-4 bg-gradient-to-b from-gray-900 to-gray-800">
+      <div className="max-w-6xl mx-auto">
+        {/* Section Title */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col items-center"
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <motion.h2
-            variants={itemVariants}
-            className="text-3xl font-bold mb-6 text-center text-blue-700"
-          >
+          <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 mb-4">
             About Me
-          </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-gray-700 text-base md:text-lg leading-relaxed text-center"
-          >
-            I am a skilled full-stack developer with a proven ability to craft exceptional digital experiences across web and mobile platforms. My expertise lies in leveraging a robust tech stack including <span className="font-semibold text-blue-600">React</span>, <span className="font-semibold text-blue-600">Next.js</span>, <span className="font-semibold text-blue-600">MongoDB</span>, <span className="font-semibold text-blue-600">Express.js</span>, <span className="font-semibold text-blue-600">React Native</span>, <span className="font-semibold text-blue-600">Tailwind CSS</span>, <span className="font-semibold text-blue-600">JavaScript</span>, and <span className="font-semibold text-blue-600">TypeScript</span> to build high-performance, scalable, and user-centric applications.
-            <br /><br />
-            With a deep understanding of both frontend and backend development, I excel at transforming complex ideas into intuitive and engaging user interfaces. I am proficient in building robust APIs, managing databases, and optimizing application performance. My passion for staying up-to-date with the latest technological advancements ensures that I deliver cutting-edge solutions that meet the evolving needs of modern businesses.
-            <br /><br />
-            I thrive on challenges and am dedicated to delivering exceptional results. <span className="font-semibold text-blue-600">Let's collaborate to bring your vision to life.</span>
-          </motion.p>
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-500 mx-auto"></div>
         </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <p className="text-lg text-gray-300 leading-relaxed">
+              I'm a passionate Full-Stack Developer with expertise in building scalable web and mobile applications. With 5+ years of experience, I've worked with startups and established companies to deliver high-quality digital solutions.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              My passion lies in creating elegant, user-centric solutions that solve real-world problems. I'm constantly learning and staying updated with the latest technologies and best practices in the industry.
+            </p>
+            <div className="pt-4">
+              <a href="#contact" className="inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white rounded-lg font-semibold transition transform hover:scale-105">
+                Let's Work Together
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Right Skills */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            {skills.map((skillGroup, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm border border-blue-500/20 rounded-lg p-6 hover:border-blue-500/50 transition">
+                <h3 className="text-xl font-bold text-blue-400 mb-4">{skillGroup.category}</h3>
+                <div className="flex flex-wrap gap-3">
+                  {skillGroup.items.map((skill, i) => (
+                    <span key={i} className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium hover:bg-blue-500/30 transition">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
