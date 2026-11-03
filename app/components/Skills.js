@@ -96,7 +96,7 @@ const Skills = () => {
             transition={{ duration: 0.6 }}
           >
             {[
-              'JavaScript', 'HTML5', 'CSS3', 'Redux', 'SWR', 'GraphQL', 'Webpack',
+              'JavaScript', 'Flutter', 'CSS3', 'Redux', 'SWR', 'GraphQL', 'Webpack',
               'Jest', 'Cypress', 'Git', 'CI/CD', 'AWS', 'Vercel', 'Netlify',
             ].map((tag, i) => (
               <span
