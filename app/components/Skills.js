@@ -6,6 +6,7 @@ const skillGroups = [
     category: 'Frontend',
     skills: [
       { name: 'React.js', level: 92, color: 'from-blue-400 to-cyan-400' },
+       { name: 'Flutter', level: 92, color: 'from-blue-400 to-cyan-400' },
       { name: 'Next.js', level: 88, color: 'from-sky-400 to-indigo-400' },
       { name: 'Tailwind CSS', level: 90, color: 'from-teal-400 to-green-400' },
       { name: 'Framer Motion', level: 78, color: 'from-purple-400 to-pink-400' },
