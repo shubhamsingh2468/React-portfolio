@@ -24,6 +24,7 @@ const skillGroups = [
     category: 'Mobile & Others',
     skills: [
       { name: 'React Native', level: 80, color: 'from-indigo-400 to-violet-400' },
+      { name: 'Flutter', level: 80, color: 'from-indigo-400 to-violet-400' },
       { name: 'Firebase', level: 75, color: 'from-orange-400 to-amber-400' },
       { name: 'TypeScript', level: 70, color: 'from-sky-400 to-blue-400' },
       { name: 'Docker', level: 60, color: 'from-gray-400 to-stone-400' },
